@@ -19,30 +19,122 @@
 
     <!-- Style Definitions -->
     <style>
-      h1 {
-        font-family: 'Roboto Slab', serif;
-        font-size: 250%;
-        font-weight: bold;
+      html *{
+        -webkit-font-smoothing: antialiased;
       }
-      h2 {
-        font-family: 'Roboto Slab', serif;
-        font-size: 175%;
-        font-weight: bold;
-      }
-      h3 {
-        font-family: 'Roboto Slab', serif;
-        font-size: 175%;
-        font-weight: bold;
-      }
+
       h4 {
         font-family: 'Roboto Slab', serif;
-        font-size: 150%;
-        font-weight: bold;
+        font-size: 115%;
       }
+
+      .h6, h6 {
+          font-size: 0.90rem !important;
+          font-weight: 500;
+          font-family: 'Roboto Slab', serif;
+          line-height: 1.5em;
+          text-transform: uppercase;
+      }
+
       p {
         font-family: 'Roboto Slab', serif;
         font-size: 130%;
       }
+      
+      .name h6 {
+          margin-top: 10px;
+          margin-bottom: 10px;
+      }
+
+      .profile-page .page-header {
+          height: 300px;
+          background-position:center;
+      }
+
+      .page-header {
+          height: 100vh;
+          background-size: cover;
+          margin: 0;
+          padding: 0;
+          border: 0;
+          display: flex;
+          align-items: center;
+      }
+
+      .main-raised {
+          margin: -60px 30px 0;
+          border-radius: 6px;
+          box-shadow: 0 16px 24px 2px rgba(0,0,0,.14), 0 6px 30px 5px rgba(0,0,0,.12), 0 8px 10px -5px rgba(0,0,0,.2);
+      }
+
+      .main {
+          background: #FFF;
+          position: relative;
+          z-index: 3;
+      }
+
+      .profile-page .profile {
+          text-align: center;
+      }
+
+      .profile-page .profile img {
+          max-width: 160px;
+          width: 100%;
+          margin: 0 auto;
+          -webkit-transform: translate3d(0,-50%,0);
+          -moz-transform: translate3d(0,-50%,0);
+          -o-transform: translate3d(0,-50%,0);
+          -ms-transform: translate3d(0,-50%,0);
+          transform: translate3d(0,-50%,0);
+      }
+
+      .img-raised {
+          box-shadow: 0 5px 15px -8px rgba(0,0,0,.24), 0 8px 10px -5px rgba(0,0,0,.2);
+      }
+
+      .rounded-circle {
+          border-radius: 50%!important;
+      }
+
+      .img-fluid, .img-thumbnail {
+          max-width: 100%;
+          height: auto;
+      }
+
+      .title {
+          margin-top: 30px;
+          margin-bottom: 25px;
+          min-height: 32px;
+          color: #3C4858;
+          font-weight: 700;
+          font-family: "Roboto Slab", serif;
+      }
+
+      .profile-page .description {
+          margin: 1.071rem auto 0;
+          max-width: 600px;
+          color: rgb(110, 110, 110);
+          font-weight: 350;
+      }
+
+      p {
+          font-size: 16px;
+          margin: 0 0 10px;
+      }
+
+      .profile-page .profile-tabs {
+          margin-top: 4.284rem;
+      }
+
+      .profile-page .profile .name{
+          margin-top: -80px;
+      }
+
+      img.rounded {
+          border-radius: 6px!important;
+      }
+
+
     </style>
 
     <!-- jQuery (Javascript tool) -->
@@ -51,8 +143,9 @@
     </script>
 
   </head>
-  <body>
+  <body class="profile-page">
     <div class="container">
+
       <!-- Navbar -->
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #98d7c2;">
@@ -94,47 +187,54 @@
         </nav>
       </div>
       
-      <!-- Profile Image -->
-      <img class="img-responsive img-fluid rounded mx-auto d-block" src="https://img.icons8.com/color/1600/person-male.png" alt="A generic profile image.">
+      <!-- Profile Header -->
+      <div class="page-header" data-parallax="true"></div>
+      <div class="main main-raised">
+              <div class="container">
+                  <div class="row">
+                    <div class="col-md-6 ms-auto me-auto">
+                       <div class="profile">
+                            <div class="avatar">
+                                <img src="https://dailynewshungary.com/wp-content/uploads/2018/01/18622628_146041712604173_5023056421634447578_n.jpg" alt="Circle Image" class="img-raised rounded-circle img-fluid">
+                            </div>
+                            <div class="name">
+                                <h3 class="title">Harold Smith</h3>
+                                <h6>Male - 19 years old - Student</h6>
+                            </div>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="description text-center">
+                      <p>I'm a college student who likes to stay home.</p>
+                  </div>
       
-      <!-- Personal Info -->
-      <h3 class="text-center">John Smith</h3>
-      <h4>Perosnal Info:</h4>
-      <div class="row">
-        <div class="col">
-            <p>Male</p>
-        </div>
-        <div class="col">
-            <p>19 years old</p>
-        </div>
-        <div class="col">
-            <p>College Student</p>
-        </div>
+      <!-- Location -->
+      <div class="p-2">
+        <h4>Looking to Stay in:</h4>
+        <p>Roseville</p>
       </div>
 
-      <!-- Specifications -->
-      <h4>Looking to Stay in:</h4>
-      <p>Roseville</p>
-
-      <!-- Bio -->
-      <h4>Bio:</h4>
-      <p>I'm a 19 year old college student that keeps to myself.</p>
-
       <!-- Preferences -->
-      <h4>Preferences:</h4>
-      <ul class="list-group">
-        <li class="list-group-item">Pet Friendly</li>
-        <li class="list-group-item">No Smoking</li>
-        <li class="list-group-item">18-20 years old</li>
-      </ul>
-
+      <div class="p-2">
+        <h4>Roommate Preferences:</h4>
+        <ul class="list-group">
+          <li class="list-group-item">Pet Friendly <i class="fas fa-dog"></i></li>
+          <li class="list-group-item">No Smoking <i class="fas fa-smoking-ban"></i></li>
+          <li class="list-group-item">18-20 years old <i class="fa fa-address-card" aria-hidden="true"></i>
+          </li>
+        </ul>
+      </div>
+      
       <!-- Contact Info -->
-      <h4>Contact Info:</h4>
-      <ul class="list-group">
-        <li class="list-group-item">Phone Number: 000-000-0000</li>
-        <li class="list-group-item">Instagram: <a href="#">johnsmith</a></li>
-        <li class="list-group-item">Twitter: <a href="#">@johnsmith</a></li>
-      </ul>
+      <div class="p-2">
+        <h4>Contact Info:</h4>
+        <ul class="list-group">
+          <li class="list-group-item">Phone Number: 000-000-0000</li>
+          <li class="list-group-item">Instagram: <a href="#">haroldsmith</a></li>
+          <li class="list-group-item">Twitter: <a href="#">@haroldsmith</a></li>
+        </ul>
+      </div>
+      
 
     </div>
     
