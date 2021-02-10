@@ -1,0 +1,256 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Font Awesome (Icons) -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <!-- Import Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+
+    <title>TAY Housing Collaborative Profile Page</title>
+
+    <!-- Style Definitions -->
+    <style>
+      html *{
+        -webkit-font-smoothing: antialiased;
+      }
+      
+      .rounded-circle {
+          border-radius: 50%!important;
+      }
+
+      .img-fluid, .img-thumbnail {
+          max-width: 100%;
+          height: auto;
+      }
+
+      img.rounded {
+          border-radius: 6px!important;
+      }
+
+      .name{
+        font-family: 'Roboto Slab', serif;
+        font-size: 17px;
+        margin: 0 0 10px;
+        color: rgb(37, 37, 37);
+      }
+      
+      .user-info{
+        font-family: 'Roboto Slab', serif;
+        font-size: 15px;
+        margin: 0 0 10px;
+        color: rgb(63, 63, 63);
+      }
+      
+      p {
+        font-family: 'Roboto Slab', serif;
+        font-size: 14px;
+        margin: 0 0 10px;
+        color: rgb(110, 110, 110);
+      }
+
+      .tiles{
+        grid-template-columns: repeat(4,minmax(0,1fr));
+        display: grid;
+        row-gap: 1rem;
+        column-gap: 1rem;
+        grid-auto-flow: dense;
+      }
+
+      .centered {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        width: 50%;
+      }
+
+      .bg-gray {
+        background-color: #eaeaea;
+      }
+
+    </style>
+
+    <!-- jQuery (Javascript tool) -->
+    <script>
+      
+    </script>
+
+  </head>
+  <body class="profile-page">
+    <div class="container">
+
+      <!-- Navbar -->
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #98d7c2;">
+          <a class="navbar-brand" href="#">
+            <img class="img-responsive img-fluid d-inline-block align-top" width="100" height="100" src="https://paperbackdesign.com/wp-content/uploads/2015/04/generic-logo_150ppi-600x300px.png" alt="A generic logo to be replaced.">
+          </a>
+          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            
+            <ul class="navbar-nav mr-auto">
+              <li class="nav-item active">
+                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Profiles</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Resources
+                </a>
+                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <a class="dropdown-item" href="#">Resource 1</a>
+                  <a class="dropdown-item" href="#">Resource 2</a>
+                  <div class="dropdown-divider"></div>
+                  <a class="dropdown-item" href="#">Resource 3</a>
+                </div>
+              </li>
+            </ul>
+  
+            <form class="d-flex ms-sm-auto">
+              <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+              <button class="btn btn-outline-success" type="submit">Search</button>
+            </form>
+          
+          </div>
+        </nav>
+      </div>
+      
+      <!-- List of Profiles -->
+      <div class="container p-2">
+        <div class="tiles">
+          <!-- Profile 1 -->
+          <article class="">
+            <a class="" href="" aria-label="View [name]'s profile"></a>
+            <div class="flex h-40 bg-gray border-b-2">
+              <img class="block img-fluid centered h-32 w-32 rounded-circle p-2" src="https://dailynewshungary.com/wp-content/uploads/2018/01/18622628_146041712604173_5023056421634447578_n.jpg" alt="Photo of [name]" width="160" height="160">
+            </div>
+            <div class="flex-1 border border-gray-lighter border-t-0 rounded-b flex flex-column">
+              <header class="flex-1 flex flex-column justify-content-between px-4 py-2">
+                <div>
+                  <div class="flex items-center">
+                    <p class="name">Harold</p>
+                  </div>
+                  <p class="user-info mb-2">19 - Male</p>
+                  <p class="text-sm text-gray-darker break-words leading-snug line-clamp-3 mb-6">I am a college student who likes to stay home.</p>
+                </div>
+                <p class="text-xs text-gray-darker truncate mb-2">
+                  <a class="text-black" href="">Looking in: Roseville</a>
+                </p>
+              </header>
+            </div>
+          </article>
+          <!-- Profile 2 -->
+          <article class="">
+            <a class="" href="" aria-label="View [name]'s profile"></a>
+            <div class="flex h-40 bg-gray border-b-2">
+              <img class="block img-fluid centered h-32 w-32 rounded-circle p-2" src="https://dailynewshungary.com/wp-content/uploads/2018/01/18622628_146041712604173_5023056421634447578_n.jpg" alt="Photo of [name]" width="160" height="160">
+            </div>
+            <div class="flex-1 border border-gray-lighter border-t-0 rounded-b flex flex-column">
+              <header class="flex-1 flex flex-column justify-content-between px-4 py-2">
+                <div>
+                  <div class="flex items-center">
+                    <p class="name">Harold</p>
+                  </div>
+                  <p class="user-info mb-2">19 - Male</p>
+                  <p class="text-sm text-gray-darker break-words leading-snug line-clamp-3 mb-6">I am a college student who likes to stay home.</p>
+                </div>
+                <p class="text-xs text-gray-darker truncate mb-2">
+                  <a class="text-black" href="">Looking in: Roseville</a>
+                </p>
+              </header>
+            </div>
+          </article>
+          <!-- Profile 3 -->
+          <article class="">
+            <a class="" href="" aria-label="View [name]'s profile"></a>
+            <div class="flex h-40 bg-gray border-b-2">
+              <img class="block img-fluid centered h-32 w-32 rounded-circle p-2" src="https://dailynewshungary.com/wp-content/uploads/2018/01/18622628_146041712604173_5023056421634447578_n.jpg" alt="Photo of [name]" width="160" height="160">
+            </div>
+            <div class="flex-1 border border-gray-lighter border-t-0 rounded-b flex flex-column">
+              <header class="flex-1 flex flex-column justify-content-between px-4 py-2">
+                <div>
+                  <div class="flex items-center">
+                    <p class="name">Harold</p>
+                  </div>
+                  <p class="user-info mb-2">19 - Male</p>
+                  <p class="text-sm text-gray-darker break-words leading-snug line-clamp-3 mb-6">I am a college student who likes to stay home.</p>
+                </div>
+                <p class="text-xs text-gray-darker truncate mb-2">
+                  <a class="text-black" href="">Looking in: Roseville</a>
+                </p>
+              </header>
+            </div>
+          </article>
+          <!-- Profile 4 -->
+          <article class="">
+            <a class="" href="" aria-label="View [name]'s profile"></a>
+            <div class="flex h-40 bg-gray border-b-2">
+              <img class="block img-fluid centered h-32 w-32 rounded-circle p-2" src="https://dailynewshungary.com/wp-content/uploads/2018/01/18622628_146041712604173_5023056421634447578_n.jpg" alt="Photo of [name]" width="160" height="160">
+            </div>
+            <div class="flex-1 border border-gray-lighter border-t-0 rounded-b flex flex-column">
+              <header class="flex-1 flex flex-column justify-content-between px-4 py-2">
+                <div>
+                  <div class="flex items-center">
+                    <p class="name">Harold</p>
+                  </div>
+                  <p class="user-info mb-2">19 - Male</p>
+                  <p class="text-sm text-gray-darker break-words leading-snug line-clamp-3 mb-6">I am a college student who likes to stay home.</p>
+                </div>
+                <p class="text-xs text-gray-darker truncate mb-2">
+                  <a class="text-black" href="">Looking in: Roseville</a>
+                </p>
+              </header>
+            </div>
+          </article>
+          <!-- Profile 5 -->
+          <article class="">
+            <a class="" href="" aria-label="View [name]'s profile"></a>
+            <div class="flex h-40 bg-gray border-b-2">
+              <img class="block img-fluid centered h-32 w-32 rounded-circle p-2" src="https://dailynewshungary.com/wp-content/uploads/2018/01/18622628_146041712604173_5023056421634447578_n.jpg" alt="Photo of [name]" width="160" height="160">
+            </div>
+            <div class="flex-1 border border-gray-lighter border-t-0 rounded-b flex flex-column">
+              <header class="flex-1 flex flex-column justify-content-between px-4 py-2">
+                <div>
+                  <div class="flex items-center">
+                    <p class="name">Harold</p>
+                  </div>
+                  <p class="user-info mb-2">19 - Male</p>
+                  <p class="text-sm text-gray-darker break-words leading-snug line-clamp-3 mb-6">I am a college student who likes to stay home.</p>
+                </div>
+                <p class="text-xs text-gray-darker truncate mb-2">
+                  <a class="text-black" href="">Looking in: Roseville</a>
+                </p>
+              </header>
+            </div>
+          </article>
+        </div>
+      </div>
+      
+
+    </div>
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+  </body>
+</html>
