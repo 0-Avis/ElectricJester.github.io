@@ -76,6 +76,50 @@
         background-color: #eaeaea;
       }
 
+      /* hover */
+      .container {
+        display: flex;
+        justify-content: space-evenly;
+        align-items: center;
+        flex-wrap: wrap;
+        height: 97vh;
+      }
+      .container .box {
+        width: 250px;
+        height: 250px;
+        border-radius: 10px;
+        background-color: #f6f6f6;
+        margin: 20px;
+        transition: 0.3s all ease-in-out;
+        position: relative;
+      }
+      .container .box .boxContent {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        padding: 15px;
+      }
+
+      .container .box a {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        left: 0;
+      }
+      .container .box:hover {
+        background: linear-gradient(130deg, #98d7c2, #ddffe7 100%);
+        box-shadow: none;
+      }
+      .container .box:hover .icon,
+      .container .box:hover .title,
+      .container .box:hover .desc {
+        color: white;
+        transition: 0.3s all ease-in-out;
+      }
+
     </style>
 
     <!-- jQuery (Javascript tool) -->
@@ -84,7 +128,7 @@
     </script>
 
   </head>
-  <body class="profile-page">
+  <body class="profile-directory">
     <div class="container">
 
       <!-- Navbar -->
@@ -132,109 +176,124 @@
       <div class="container p-2">
         <div class="tiles">
           <!-- Profile 1 -->
-          <article class="">
-            <a class="" href="" aria-label="View [name]'s profile"></a>
-            <div class="flex h-40 bg-gray border-b-2">
-              <img class="block img-fluid centered h-32 w-32 rounded-circle p-2" src="https://dailynewshungary.com/wp-content/uploads/2018/01/18622628_146041712604173_5023056421634447578_n.jpg" alt="Photo of [name]" width="160" height="160">
-            </div>
-            <div class="flex-1 border border-gray-lighter border-t-0 rounded-b flex flex-column">
-              <header class="flex-1 flex flex-column justify-content-between px-4 py-2">
-                <div>
-                  <div class="flex items-center">
-                    <p class="name">Harold</p>
+          <article class="box">
+            <div class="boxContent">
+              <a class="" href="" aria-label="View [name]'s profile"></a>
+              <div class="flex h-40 bg-gray border-b-2">
+                <img class="block img-fluid centered h-32 w-32 rounded-circle p-2" src="https://dailynewshungary.com/wp-content/uploads/2018/01/18622628_146041712604173_5023056421634447578_n.jpg" alt="Photo of [name]" width="160" height="160">
+              </div>
+              <div class="flex-1 border border-gray-lighter border-t-0 rounded-b flex flex-column">
+                <header class="flex-1 flex flex-column justify-content-between px-4 py-2">
+                  <div>
+                    <div class="flex items-center">
+                      <p class="name">Harold</p>
+                    </div>
+                    <p class="user-info mb-2">19 - Male</p>
+                    <p class="text-sm text-gray-darker break-words leading-snug line-clamp-3 mb-6">I am a college student who likes to stay home.</p>
                   </div>
-                  <p class="user-info mb-2">19 - Male</p>
-                  <p class="text-sm text-gray-darker break-words leading-snug line-clamp-3 mb-6">I am a college student who likes to stay home.</p>
-                </div>
-                <p class="text-xs text-gray-darker truncate mb-2">
-                  <a class="text-black" href="">Looking in: Roseville</a>
-                </p>
-              </header>
+                  <p class="text-xs text-gray-darker truncate mb-2">
+                    <a class="text-black" href="">Looking in: Roseville</a>
+                  </p>
+                </header>
+              </div>
             </div>
+            
           </article>
           <!-- Profile 2 -->
-          <article class="">
-            <a class="" href="" aria-label="View [name]'s profile"></a>
-            <div class="flex h-40 bg-gray border-b-2">
-              <img class="block img-fluid centered h-32 w-32 rounded-circle p-2" src="https://dailynewshungary.com/wp-content/uploads/2018/01/18622628_146041712604173_5023056421634447578_n.jpg" alt="Photo of [name]" width="160" height="160">
-            </div>
-            <div class="flex-1 border border-gray-lighter border-t-0 rounded-b flex flex-column">
-              <header class="flex-1 flex flex-column justify-content-between px-4 py-2">
-                <div>
-                  <div class="flex items-center">
-                    <p class="name">Harold</p>
+          <article class="box">
+            <div class="boxContent">
+              <a class="" href="" aria-label="View [name]'s profile"></a>
+              <div class="flex h-40 bg-gray border-b-2">
+                <img class="block img-fluid centered h-32 w-32 rounded-circle p-2" src="https://dailynewshungary.com/wp-content/uploads/2018/01/18622628_146041712604173_5023056421634447578_n.jpg" alt="Photo of [name]" width="160" height="160">
+              </div>
+              <div class="flex-1 border border-gray-lighter border-t-0 rounded-b flex flex-column">
+                <header class="flex-1 flex flex-column justify-content-between px-4 py-2">
+                  <div>
+                    <div class="flex items-center">
+                      <p class="name">Harold</p>
+                    </div>
+                    <p class="user-info mb-2">19 - Male</p>
+                    <p class="text-sm text-gray-darker break-words leading-snug line-clamp-3 mb-6">I am a college student who likes to stay home.</p>
                   </div>
-                  <p class="user-info mb-2">19 - Male</p>
-                  <p class="text-sm text-gray-darker break-words leading-snug line-clamp-3 mb-6">I am a college student who likes to stay home.</p>
-                </div>
-                <p class="text-xs text-gray-darker truncate mb-2">
-                  <a class="text-black" href="">Looking in: Roseville</a>
-                </p>
-              </header>
+                  <p class="text-xs text-gray-darker truncate mb-2">
+                    <a class="text-black" href="">Looking in: Roseville</a>
+                  </p>
+                </header>
+              </div>
             </div>
+            
           </article>
           <!-- Profile 3 -->
-          <article class="">
-            <a class="" href="" aria-label="View [name]'s profile"></a>
-            <div class="flex h-40 bg-gray border-b-2">
-              <img class="block img-fluid centered h-32 w-32 rounded-circle p-2" src="https://dailynewshungary.com/wp-content/uploads/2018/01/18622628_146041712604173_5023056421634447578_n.jpg" alt="Photo of [name]" width="160" height="160">
-            </div>
-            <div class="flex-1 border border-gray-lighter border-t-0 rounded-b flex flex-column">
-              <header class="flex-1 flex flex-column justify-content-between px-4 py-2">
-                <div>
-                  <div class="flex items-center">
-                    <p class="name">Harold</p>
+          <article class="box">
+            <div class="boxContent">
+              <a class="" href="" aria-label="View [name]'s profile"></a>
+              <div class="flex h-40 bg-gray border-b-2">
+                <img class="block img-fluid centered h-32 w-32 rounded-circle p-2" src="https://dailynewshungary.com/wp-content/uploads/2018/01/18622628_146041712604173_5023056421634447578_n.jpg" alt="Photo of [name]" width="160" height="160">
+              </div>
+              <div class="flex-1 border border-gray-lighter border-t-0 rounded-b flex flex-column">
+                <header class="flex-1 flex flex-column justify-content-between px-4 py-2">
+                  <div>
+                    <div class="flex items-center">
+                      <p class="name">Harold</p>
+                    </div>
+                    <p class="user-info mb-2">19 - Male</p>
+                    <p class="text-sm text-gray-darker break-words leading-snug line-clamp-3 mb-6">I am a college student who likes to stay home.</p>
                   </div>
-                  <p class="user-info mb-2">19 - Male</p>
-                  <p class="text-sm text-gray-darker break-words leading-snug line-clamp-3 mb-6">I am a college student who likes to stay home.</p>
-                </div>
-                <p class="text-xs text-gray-darker truncate mb-2">
-                  <a class="text-black" href="">Looking in: Roseville</a>
-                </p>
-              </header>
+                  <p class="text-xs text-gray-darker truncate mb-2">
+                    <a class="text-black" href="">Looking in: Roseville</a>
+                  </p>
+                </header>
+              </div>
             </div>
+            
           </article>
           <!-- Profile 4 -->
-          <article class="">
-            <a class="" href="" aria-label="View [name]'s profile"></a>
-            <div class="flex h-40 bg-gray border-b-2">
-              <img class="block img-fluid centered h-32 w-32 rounded-circle p-2" src="https://dailynewshungary.com/wp-content/uploads/2018/01/18622628_146041712604173_5023056421634447578_n.jpg" alt="Photo of [name]" width="160" height="160">
-            </div>
-            <div class="flex-1 border border-gray-lighter border-t-0 rounded-b flex flex-column">
-              <header class="flex-1 flex flex-column justify-content-between px-4 py-2">
-                <div>
-                  <div class="flex items-center">
-                    <p class="name">Harold</p>
+          <article class="box">
+            <div class="boxContent">
+              <a class="" href="" aria-label="View [name]'s profile"></a>
+              <div class="flex h-40 bg-gray border-b-2">
+                <img class="block img-fluid centered h-32 w-32 rounded-circle p-2" src="https://dailynewshungary.com/wp-content/uploads/2018/01/18622628_146041712604173_5023056421634447578_n.jpg" alt="Photo of [name]" width="160" height="160">
+              </div>
+              <div class="flex-1 border border-gray-lighter border-t-0 rounded-b flex flex-column">
+                <header class="flex-1 flex flex-column justify-content-between px-4 py-2">
+                  <div>
+                    <div class="flex items-center">
+                      <p class="name">Harold</p>
+                    </div>
+                    <p class="user-info mb-2">19 - Male</p>
+                    <p class="text-sm text-gray-darker break-words leading-snug line-clamp-3 mb-6">I am a college student who likes to stay home.</p>
                   </div>
-                  <p class="user-info mb-2">19 - Male</p>
-                  <p class="text-sm text-gray-darker break-words leading-snug line-clamp-3 mb-6">I am a college student who likes to stay home.</p>
-                </div>
-                <p class="text-xs text-gray-darker truncate mb-2">
-                  <a class="text-black" href="">Looking in: Roseville</a>
-                </p>
-              </header>
+                  <p class="text-xs text-gray-darker truncate mb-2">
+                    <a class="text-black" href="">Looking in: Roseville</a>
+                  </p>
+                </header>
+              </div>
             </div>
+            
           </article>
           <!-- Profile 5 -->
-          <article class="">
-            <a class="" href="" aria-label="View [name]'s profile"></a>
-            <div class="flex h-40 bg-gray border-b-2">
-              <img class="block img-fluid centered h-32 w-32 rounded-circle p-2" src="https://dailynewshungary.com/wp-content/uploads/2018/01/18622628_146041712604173_5023056421634447578_n.jpg" alt="Photo of [name]" width="160" height="160">
-            </div>
-            <div class="flex-1 border border-gray-lighter border-t-0 rounded-b flex flex-column">
-              <header class="flex-1 flex flex-column justify-content-between px-4 py-2">
-                <div>
-                  <div class="flex items-center">
-                    <p class="name">Harold</p>
+          <article class="box">
+            <div class="boxContent">
+              <a class="" href="" aria-label="View [name]'s profile"></a>
+              <div class="flex h-40 bg-gray border-b-2">
+                <img class="block img-fluid centered h-32 w-32 rounded-circle p-2" src="https://dailynewshungary.com/wp-content/uploads/2018/01/18622628_146041712604173_5023056421634447578_n.jpg" alt="Photo of [name]" width="160" height="160">
+              </div>
+              <div class="flex-1 border border-gray-lighter border-t-0 rounded-b flex flex-column">
+                <header class="flex-1 flex flex-column justify-content-between px-4 py-2">
+                  <div>
+                    <div class="flex items-center">
+                      <p class="name">Harold</p>
+                    </div>
+                    <p class="user-info mb-2">19 - Male</p>
+                    <p class="text-sm text-gray-darker break-words leading-snug line-clamp-3 mb-6">I am a college student who likes to stay home.</p>
                   </div>
-                  <p class="user-info mb-2">19 - Male</p>
-                  <p class="text-sm text-gray-darker break-words leading-snug line-clamp-3 mb-6">I am a college student who likes to stay home.</p>
-                </div>
-                <p class="text-xs text-gray-darker truncate mb-2">
-                  <a class="text-black" href="">Looking in: Roseville</a>
-                </p>
-              </header>
+                  <p class="text-xs text-gray-darker truncate mb-2">
+                    <a class="text-black" href="">Looking in: Roseville</a>
+                  </p>
+                </header>
+              </div>
             </div>
+            
           </article>
         </div>
       </div>
