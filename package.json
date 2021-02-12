@@ -1,0 +1,27 @@
+{
+  "name": "electricjester.github.io",
+  "version": "1.0.0",
+  "description": "TayHC Web App ",
+  "main": "app.js",
+  "dependencies": {
+    "express": "^4.17.1",
+    "firebase": "^8.2.6",
+    "requirejs": "^2.3.6",
+    "uniq": "^1.0.1"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ElectricJester/ElectricJester.github.io.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ElectricJester/ElectricJester.github.io/issues"
+  },
+  "homepage": "https://github.com/ElectricJester/ElectricJester.github.io#readme"
+}
