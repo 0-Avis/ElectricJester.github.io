@@ -7,4 +7,12 @@ app.get('/', function(req, res) {
     res.sendFile(path.join(__dirname, '/index.html'));
 })
 
-app.listen(8000);
+app.get('/profile', function(req, res) {
+    res.sendFile(path.join(__dirname + '/profile.html'));
+}) 
+
+app.get('/profiledirectory', function(req, res) {
+    res.sendFile(path.join(__dirname + '/profiledirectory.html'));
+})
+
+//app.listen(8000);
