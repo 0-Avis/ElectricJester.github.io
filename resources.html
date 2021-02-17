@@ -1,0 +1,542 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Font Awesome (Icons) -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <title>TAY Housing Collaborative Resources</title>
+
+    <!-- Import Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+
+    <link rel="stylesheet" href="style2.css">
+    
+     <!-- Custom sidebar template -->
+  <link href="css/simple-sidebar.css" rel="stylesheet">
+
+    <!-- Style Definitions -->
+    <style>
+      #wrapper {
+    overflow-x: hidden;
+    }
+
+    #sidebar-wrapper {
+    min-height: 100vh;
+    margin-left: -15rem;
+    -webkit-transition: margin .25s ease-out;
+    -moz-transition: margin .25s ease-out;
+    -o-transition: margin .25s ease-out;
+    transition: margin .25s ease-out;
+    }
+
+    #sidebar-wrapper .sidebar-heading {
+    padding: 0.875rem 1.25rem;
+    font-size: 1.2rem;
+    }
+
+    #sidebar-wrapper .list-group {
+    width: 15rem;
+    }
+
+    #page-content-wrapper {
+    min-width: 100vw;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+    margin-left: 0;
+    }
+
+    @media (min-width: 768px) {
+    #sidebar-wrapper {
+        margin-left: 0;
+    }
+
+    #page-content-wrapper {
+        min-width: 0;
+        width: 100%;
+    }
+
+    #wrapper.toggled #sidebar-wrapper {
+        margin-left: -15rem;
+    }
+    }
+
+    .container {
+        position: relative;
+      }
+    
+    .centered {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    .home-background {
+        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.90) 100%), 
+                    url(https://media.istockphoto.com/photos/suburban-white-generic-house-picture-id480840087);
+    }
+    </style>
+
+    <!-- jQuery (Javascript tool) -->
+    <script>
+        $("#menu-toggle").click(function(e) {
+            e.preventDefault();
+            $("#wrapper").toggleClass("toggled");
+        });
+        $('#my-link').click(function(e) {
+        $('#collapseOne').collapse('hide');
+        $('#collapseTwo').collapse('show');        
+        });
+    </script>
+
+  </head>
+  <body>
+
+    <!-- Main Navbar -->
+    <div id="top-navbar">
+        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #98d7c2;">
+            <a class="navbar-brand" href="#">
+              <img class="img-responsive img-fluid d-inline-block align-top" width="100" height="100" src="https://paperbackdesign.com/wp-content/uploads/2015/04/generic-logo_150ppi-600x300px.png" alt="A generic logo to be replaced.">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              
+              <ul class="navbar-nav mr-auto">
+                <li class="nav-item active">
+                  <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="profiledirectory.html">Profiles</a>
+                </li>
+                <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                    Resources
+                  </a>
+                  <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item" href="#">Category 1</a></li>
+                    <li><a class="dropdown-item" href="#">Category 2</a></li>
+                    <li><a class="dropdown-item" href="#">Category 3</a></li>
+                  </ul>
+                </li>
+              </ul>
+              
+              <div class="d-flex ms-sm-auto p-2">
+                <!-- Login/Sign Up buttons -->
+                <section id="whenSignedOut">
+                  <button class="btn btn-primary btn-block"><i class="fa fa-sign-in-alt"></i> Sign in</button>
+                  <button id="signInBtn" class="btn btn-danger btn-block"><i class="fa fa-sign-in-alt"></i> Sign in with Google</button>
+                  <button class="btn btn-secondary btn-block"><i class="fa fa-user-plus"></i> Sign Up</button>
+                </section>
+                <!-- sign out button -->
+                <section id="whenSignedIn" hidden="true">
+                  <div id="userDetails"></div>
+                  <button id="signOutBtn" class="btn btn-danger btn-block"> Sign Out</button>
+                </section>
+              </div>
+            </div>
+          </nav>
+    </div>
+    
+     <!-- Header -->
+     <div class="home-background container" style='min-height: 20vh; color: #fff;'>
+        <div class="centered">
+          <h1 class="text-center">Resources</h1>
+        </div>
+      </div>
+
+    <div class="d-flex" id="wrapper">
+
+        <!-- Side Navbar -->
+        <div class="bg-light border-right" id="sidebar-wrapper">
+          <div class="sidebar-heading">Resources </div>
+          <div class="list-group list-group-flush">
+            <a href="#resource-1" class="list-group-item list-group-item-action bg-light">AMI Housing, Inc.</a>
+            <a href="#resource-2" class="list-group-item list-group-item-action bg-light">Blossom Place</a>
+            <a href="#resource-3" class="list-group-item list-group-item-action bg-light">City of Roseville Housing Authority</a>
+            <a href="#resource-4" class="list-group-item list-group-item-action bg-light">Golden Sierra Job Training Agency</a>
+            <a href="#resource-5" class="list-group-item list-group-item-action bg-light">Placer County Employment Services(Rocklin/Auburn)</a>
+            <a href="#resource-6" class="list-group-item list-group-item-action bg-light">Placer County Office Of Education</a>
+            <a href="#resource-7" class="list-group-item list-group-item-action bg-light">Placer County CSOC (Children’s System of Care)</a>
+            <a href="#resource-8" class="list-group-item list-group-item-action bg-light">Sierra College / Sierra College Dorms</a>
+            <a href="#resource-9" class="list-group-item list-group-item-action bg-light">Stand Up Placer</a>
+            <a href="#resource-10" class="list-group-item list-group-item-action bg-light">The Gathering Inn</a>
+            <a href="#resource-11" class="list-group-item list-group-item-action bg-light">The Taylor House</a>
+            <a href="#resource-12" class="list-group-item list-group-item-action bg-light">Turning Point Community Programs</a>
+            <a href="#resource-13" class="list-group-item list-group-item-action bg-light">Unity Care</a>
+            <a href="#resource-14" class="list-group-item list-group-item-action bg-light">Volunteers of America</a>
+            <a href="#resource-15" class="list-group-item list-group-item-action bg-light">Volunteers of America - Home Start</a>
+          </div>
+        </div>
+    
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+
+          <div class="container-fluid">
+
+            <!-- Resource List -->
+            <div class="accordion" id="accordionExample">
+                <div id="resource-1" class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <strong>AMI Housing, Inc (AMIH)</strong>
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>AMI Housing, Inc (AMIH)</strong> is a California 501c3 non-profit corporation that provides housing, employment  and life skills programs to residents of Placer & Nevada County, who otherwise might be homeless.  AMIH also manages and operates Nevada County Housing Development Corporation.
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Transitional housing for 16-17</li>
+                        <li class="list-group-item">Hotel Vouchers</li>
+                        <li class="list-group-item">One time or temporary rental assistance</li>
+                        <li class="list-group-item">Rapid re-housing</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+                <div id="resource-2" class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <strong>Blossom Place</strong>
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      We provide safe housing, one-on-one support, and resources so former foster and at-risk young women ages 18-24 can learn the life skills, achieve the goals and gain the confidence to blossom into who they were meant to be.
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Offers housing for former foster women, 18-24</li>
+                        <li class="list-group-item">2nd home for young moms</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+                
+                <div id="resource-3" class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <strong>City of Roseville Housing Authority</strong>
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <strong>Roseville’s Housing Division</strong> strives to increase the City's affordable housing availability, including both affordable rental and affordable purchase units provided under the City’s inclusionary requirements and in city-partnered development.
+                      <ul class="list-group list-group-flush">
+                        <li class="list-group-item">Housing support vouchers for rental assistance</li>
+                        <li class="list-group-item">Ages 18+</li>
+                        <li class="list-group-item">Low income</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div id="resource-4" class="accordion-item">
+                <h2 class="accordion-header" id="headingFour">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                    <strong>Golden Sierra Job Training Agency</strong>
+                  </button>
+                </h2>
+                <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Directory for job-related resources
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Job search</li>
+                      <li class="list-group-item">Application help</li>
+                      <li class="list-group-item">Find training</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            
+              <div id="resource-5" class="accordion-item">
+                <h2 class="accordion-header" id="headingFive">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                    <strong>Placer County Employment Services(Rocklin/Auburn)</strong>
+                  </button>
+                </h2>
+                <div id="collapseFive" class="accordion-collapse collapse" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    If you are an adult with dependent children, you may be eligible for <strong>California Work Opportunity and Responsibility to Kids</strong>, or CalWORKs. CalWORKs provides:
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Child care, work expense assistance, transportation, and counseling</li>
+                      <li class="list-group-item">Education, employment and training programs through Employment Services</li>
+                      <li class="list-group-item">Families with children financial assistance to meet their basic needs</li>
+                      <li class="list-group-item">Support for families moving toward self-sufficiency</li>
+                      <li class="list-group-item">Partial to full temporary assistance with rent payments (6 months)</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div id="resource-6" class="accordion-item">
+                <h2 class="accordion-header" id="headingSix">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                    <strong>Placer County Office Of Education</strong>
+                  </button>
+                </h2>
+                <div id="collapseSix" class="accordion-collapse collapse" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>Placer County Office of Education</strong> offers trusted support from a caring team of individuals. The PCOE Foster Youth Services Coordinating Program​ is focused on providing valuable resources and technical assistance to school districts throughout the county. With a holistic, collaborative, and multi-disciplinary approach, FYSCP assists students in reaching their maximum educational and vocational potential--not to mention their well-being. The PCOE FYSCP has adopted the FosterEd approach to best serve schools, districts, and those children living in foster care.
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Independent living program (ILP)</li>
+                      <li class="list-group-item">Resources and Referrals</li>
+                      <li class="list-group-item">CASA/TAY mentor services</li>
+                      <li class="list-group-item">Counseling</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div id="resource-7" class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    <strong>Placer County CSOC (Children’s System of Care)</strong>
+                  </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    To meet the special needs of children and youth who may be at risk, and their families, Placer County has organized an integrated team offering comprehensive services. Staff from the following areas comprises the team:
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Alternative Education</li>
+                      <li class="list-group-item">Child Welfare</li>
+                      <li class="list-group-item">Children's Mental Health</li>
+                      <li class="list-group-item">Probation</li>
+                      <li class="list-group-item">Public Health</li>
+                      <li class="list-group-item">Substance Abuse Services</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div id="resource-7" class="accordion-item">
+                <h2 class="accordion-header" id="headingSeven">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                    <strong>Placer County CSOC (Children’s System of Care)</strong>
+                  </button>
+                </h2>
+                <div id="collapseSeven" class="accordion-collapse collapse" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    To meet the special needs of children and youth who may be at risk, and their families, Placer County has organized an integrated team offering comprehensive services. Staff from the following areas comprises the team:
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Alternative Education</li>
+                      <li class="list-group-item">Child Welfare</li>
+                      <li class="list-group-item">Children's Mental Health</li>
+                      <li class="list-group-item">Probation</li>
+                      <li class="list-group-item">Public Health</li>
+                      <li class="list-group-item">Substance Abuse Services</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div id="resource-8" class="accordion-item">
+                <h2 class="accordion-header" id="headingEight">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                    <strong>Sierra College / Sierra College Dorms</strong>
+                  </button>
+                </h2>
+                <div id="collapseEight" class="accordion-collapse collapse" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    The Rocklin Campus is one of the few community colleges in California that offers the experience of dorm community living. The student housing facility is one co-ed residence hall (North Hall), two stories tall with suite-style rooms. All rooms are double occupancy, and bathrooms are shared between two rooms.
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Costs: $3700 per semester (Meal plan, utilities and garbage fees included)</li>
+                      <li class="list-group-item">$250 security deposit</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div id="resource-9" class="accordion-item">
+                <h2 class="accordion-header" id="headingNine">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseNine" aria-expanded="false" aria-controls="collapseNine">
+                    <strong>Stand Up Placer</strong>
+                  </button>
+                </h2>
+                <div id="collapseNine" class="accordion-collapse collapse" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>Stand Up Placer</strong> is a private, non-profit, community-based organization providing comprehensive services to victims of domestic violence, sexual assault, and human trafficking in Placer County.
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">24-hour crisis line staffed by Crisis Counselors – 800-575-5352</li>
+                      <li class="list-group-item">24-hour Emergency Shelter (Safe House)  for survivors as well as their children and pets</li>
+                      <li class="list-group-item">12-24 month Supportive Housing Program to assist survivors of domestic violence</li>
+                      <li class="list-group-item">Assistance in obtaining emergency food, clothing and transportation</li>
+                      <li class="list-group-item">Hospital accompaniment for rape victims</li>
+                      <li class="list-group-item">Walk-in crisis intervention and advocacy for survivors and their families</li>
+                      <li class="list-group-item">Legal and social services, advocacy and accompaniment, including assistance with temporary restraining orders and custody orders</li>
+                      <li class="list-group-item">Support groups</li>
+                      <li class="list-group-item">Therapeutic and peer counseling</li>
+                      <li class="list-group-item">Individual and group counseling</li>
+                      <li class="list-group-item">Therapy for significant others of individuals who have been sexually assaulted</li>
+                      <li class="list-group-item">Educational and prevention workshops and presentations</li>
+                      <li class="list-group-item">Information and referrals</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div id="resource-10" class="accordion-item">
+                <h2 class="accordion-header" id="headingTen">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTen" aria-expanded="false" aria-controls="collapseTen">
+                    <strong>The Gathering Inn</strong>
+                  </button>
+                </h2>
+                <div id="collapseTen" class="accordion-collapse collapse" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Today, <strong>The Gathering Inn</strong> is the preeminent program serving the homeless of Placer County, providing services 365 days a year. Comprehensive services address the mental health, addiction, employment, medical, dental, and basic needs of the homeless throughout the day with on-site programs.
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Case Management</li>
+                      <li class="list-group-item">Life Skills Classes</li>
+                      <li class="list-group-item">Sobriety Programs</li>
+                      <li class="list-group-item">Housing Assistance</li>
+                      <li class="list-group-item">Employment Assistance</li>
+                      <li class="list-group-item">Case Management for Homeless patients released from local hospitals</li>
+                      <li class="list-group-item">On-site medical clinic</li>
+                      <li class="list-group-item">Clothing Closet</li>
+                      <li class="list-group-item">Laundry & Shower Services</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div id="resource-11" class="accordion-item">
+                <h2 class="accordion-header" id="headingEleven">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseEleven" aria-expanded="false" aria-controls="collapseEleven">
+                    <strong>The Taylor House</strong>
+                  </button>
+                </h2>
+                <div id="collapseEleven" class="accordion-collapse collapse" aria-labelledby="headingEleven" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Our goal is to bridge the transition to adulthood by empowering residents to become well rounded, self sufficient and confident individuals.  The residents will first complete all fundamental criteria for basic living and then continue to maintain the discipline and good habits needed to step out on their own.  Our staff, board members and volunteers continually strive to deliver the best possible experience and direction to make their stay and transition successful.
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Housing for Former Foster Youth women</li>
+                      <li class="list-group-item">18+</li>
+                      <li class="list-group-item">12-24 month program</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div id="resource-12" class="accordion-item">
+                <h2 class="accordion-header" id="headingTwelve">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwelve" aria-expanded="false" aria-controls="collapseTwelve">
+                    <strong>Turning Point Community Programs</strong>
+                  </button>
+                </h2>
+                <div id="collapseTwelve" class="accordion-collapse collapse" aria-labelledby="headingTwelve" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>Turning Point Community Programs</strong> began in 1976 with a unique vision about offering caring, hope, respect, and support on the path to recovery and mental health.
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Individual and group therapy, family education and support</li>
+                      <li class="list-group-item">Linkages to community resources and supports</li>
+                      <li class="list-group-item">Crisis intervention, psychiatric and medication services</li>
+                      <li class="list-group-item">Assessments and rehabilitative services, case management</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div id="resource-13" class="accordion-item">
+                <h2 class="accordion-header" id="headingThirteen">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThirteen" aria-expanded="false" aria-controls="collapseThirteen">
+                    <strong>Unity Care</strong>
+                  </button>
+                </h2>
+                <div id="collapseThirteen" class="accordion-collapse collapse" aria-labelledby="headingThirteen" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    <strong>Unity Care</strong> youth homes are certified Transitional Housing Placement Programs homes providing housing for both minors and non-minor dependents, specifically transitional age (TAY) foster youth. All youth in Unity Care THPP programs participate in the Independent Living Program (ILP) and/or Transition to Independence Process (TIP) program designed to educate youth with independent living skills including budgeting, college enrollment and financial aid support, job search assistance, driver’s education, case management, preparing meals, and other needs as identified. Youth also receive support to access mental health services.
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Minor and Non-Minor dependents</li>
+                      <li class="list-group-item">Independent living or Transitioning to Independent living.</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+              <div id="resource-14" class="accordion-item">
+                <h2 class="accordion-header" id="headingFourteen">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFourteen" aria-expanded="false" aria-controls="collapseFourteen">
+                    <strong>Volunteers of America</strong>
+                  </button>
+                </h2>
+                <div id="collapseFourteen" class="accordion-collapse collapse" aria-labelledby="headingFourteen" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    Creates and manages low and moderate-income level housing for the homeless, families with children, the elderly, veterans and their families, and people with disabilities, including physical and mental disabilities.
+                    <ul class="list-group list-group-flush">
+                      <li class="list-group-item">Emergency rental assistance</li>
+                      <li class="list-group-item">Affordable housing, transitional to permanent</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+
+
+            </div>
+
+            
+          </div>
+
+
+          </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+    
+      </div>
+
+    <!-- jQuery CDN - Slim version (=without AJAX) -->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <!-- jQuery Custom Scroller CDN -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+    <!-- firebase below this -->
+    <script >
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyBp0uEzwAXAIxfoy9VaImVlPTHmuLADy0s",
+        authDomain: "tayhc-8d112.firebaseapp.com",
+        projectId: "tayhc-8d112",
+        storageBucket: "tayhc-8d112.appspot.com",
+        messagingSenderId: "544152956788",
+        appId: "1:544152956788:web:a885b7c92ff87bcf760621",
+        measurementId: "G-YB8LP6R3TT"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <script src = "app.js" defer></script>
+    <script type = "module" src = "server.js"></script>
+  
+  </body>
+</html>
