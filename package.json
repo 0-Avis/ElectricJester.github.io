@@ -2,7 +2,7 @@
   "name": "electricjester.github.io",
   "version": "1.0.0",
   "description": "TayHC Web App ",
-  "main": "app.js",
+  "main": "auth.js",
   "dependencies": {
     "express": "^4.17.1",
     "firebase": "^8.2.6",
