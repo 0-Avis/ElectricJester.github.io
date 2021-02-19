@@ -76,21 +76,20 @@
             
             <ul class="navbar-nav mr-auto">
               <li class="nav-item active">
-                <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="profiledirectory.html">Profiles</a>
               </li>
               <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                   Resources
                 </a>
-                <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <a class="dropdown-item" href="#">Resource 1</a>
-                  <a class="dropdown-item" href="#">Resource 2</a>
-                  <div class="dropdown-divider"></div>
-                  <a class="dropdown-item" href="#">Resource 3</a>
-                </div>
+                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                  <li><a class="dropdown-item" href="#">Category 1</a></li>
+                  <li><a class="dropdown-item" href="#">Category 2</a></li>
+                  <li><a class="dropdown-item" href="#">Category 3</a></li>
+                </ul>
               </li>
             </ul>
             
@@ -161,7 +160,7 @@
             <p class="card-text"><small class="text-muted">Role</small></p>
           </div>
         </div>
-
+      </div>
     </div>
     
     <!-- Optional JavaScript; choose one of the two! -->
@@ -199,7 +198,12 @@
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
     </script>
+<<<<<<< HEAD
     <script src = "auth.js" defer></script>
+=======
+    <script src = "app.js" defer></script>
+    <script type = "module" src = "server.js"></script>
+>>>>>>> a2cf79bdedc488f8f8af673829226f158311b741
   
   </body>
 </html>
