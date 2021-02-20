@@ -11,7 +11,7 @@
     <!-- Font Awesome (Icons) -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <title>TAY Housing Collaborative Main Page</title>
+    <title>Placer County Roommate Finder</title>
 
     <!-- Import Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
@@ -48,7 +48,7 @@
       }
       .home-background {
         background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.90) 100%), 
-                    url(https://media.istockphoto.com/photos/suburban-white-generic-house-picture-id480840087);
+                    url(https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/room-divider-ideas-tranebergsva-gen-stockholm-living-room-industry-fantastic-frank-popular-copy-1561410782.jpg?crop=1.00xw:0.752xh;0,0.166xh&resize=1200:*);
       }
     </style>
 
@@ -59,56 +59,57 @@
 
   </head>
   <body>
-
+    <!-- Navbar -->
+    <div class="container-fluid">
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #557A95;">
+        <a class="navbar-brand" href="#">
+          <img class="img-responsive img-fluid d-inline-block align-top" width="100" height="100" src="https://paperbackdesign.com/wp-content/uploads/2015/04/generic-logo_150ppi-600x300px.png" alt="A generic logo to be replaced.">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="profiledirectory.html">Profiles</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Resources
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Category 1</a></li>
+                <li><a class="dropdown-item" href="#">Category 2</a></li>
+                <li><a class="dropdown-item" href="#">Category 3</a></li>
+              </ul>
+            </li>
+          </ul>
+          
+          <div class="d-flex ms-sm-auto p-2">
+            <!-- Login/Sign Up buttons -->
+            <section id="whenSignedOut">
+              <button class="btn btn-primary btn-block"><i class="fa fa-sign-in-alt"></i> Sign in</button>
+              <button id="signInBtn" class="btn btn-danger btn-block"><i class="fa fa-sign-in-alt"></i> Sign in with Google</button>
+              <button class="btn btn-secondary btn-block"><i class="fa fa-user-plus"></i> Sign Up</button>
+            </section>
+            <!-- sign out button -->
+            <section id="whenSignedIn" hidden="true">
+              <div id="userDetails"></div>
+              <button id="signOutBtn" class="btn btn-danger btn-block"> Sign Out</button>
+            </section>
+          </div>
+        </div>
+      </nav>
+    </div>
+    
     <div class="container-fluid">
       
-      <!-- Navbar -->
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #98d7c2;">
-          <a class="navbar-brand" href="#">
-            <img class="img-responsive img-fluid d-inline-block align-top" width="100" height="100" src="https://paperbackdesign.com/wp-content/uploads/2015/04/generic-logo_150ppi-600x300px.png" alt="A generic logo to be replaced.">
-          </a>
-          <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-          </button>
-        
-          <div class="collapse navbar-collapse" id="navbarSupportedContent">
-            
-            <ul class="navbar-nav mr-auto">
-              <li class="nav-item active">
-                <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
-              </li>
-              <li class="nav-item">
-                <a class="nav-link" href="profiledirectory.html">Profiles</a>
-              </li>
-              <li class="nav-item dropdown">
-                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                  Resources
-                </a>
-                <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                  <li><a class="dropdown-item" href="#">Category 1</a></li>
-                  <li><a class="dropdown-item" href="#">Category 2</a></li>
-                  <li><a class="dropdown-item" href="#">Category 3</a></li>
-                </ul>
-              </li>
-            </ul>
-            
-            <div class="d-flex ms-sm-auto p-2">
-              <!-- Login/Sign Up buttons -->
-              <section id="whenSignedOut">
-                <button class="btn btn-primary btn-block"><i class="fa fa-sign-in-alt"></i> Sign in</button>
-                <button id="signInBtn" class="btn btn-danger btn-block"><i class="fa fa-sign-in-alt"></i> Sign in with Google</button>
-                <button class="btn btn-secondary btn-block"><i class="fa fa-user-plus"></i> Sign Up</button>
-              </section>
-              <!-- sign out button -->
-              <section id="whenSignedIn" hidden="true">
-                <div id="userDetails"></div>
-                <button id="signOutBtn" class="btn btn-danger btn-block"> Sign Out</button>
-              </section>
-            </div>
-          </div>
-        </nav>
-      </div>
+      
       
       <!-- Picture of House/Welcome -->
       <div class="home-background container" style='min-height: 70vh; color: #fff;'>
