@@ -2,7 +2,7 @@
   "name": "electricjester.github.io",
   "version": "1.0.0",
   "description": "TayHC Web App ",
-  "main": "app.js",
+  "main": "public/auth.js",
   "dependencies": {
     "express": "^4.17.1",
     "firebase": "^8.2.6",
@@ -12,7 +12,7 @@
   "devDependencies": {},
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js"
+    "start": "node public/server.js"
   },
   "repository": {
     "type": "git",
