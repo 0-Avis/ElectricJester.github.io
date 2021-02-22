@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+
+    <!-- Font Awesome (Icons) -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+
+    <title>TAY Housing Collaborative Sign Up Page</title>
+
+    <!-- Import Fonts -->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&family=Roboto:wght@300&display=swap" rel="stylesheet"> 
+
+    <!-- Style Definitions -->
+    <style>
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        background: #167d7f;
+        background: -webkit-linear-gradient(to right, #98d7c2, #167d7f);
+        background: linear-gradient(to right, #98d7c2, #167d7f)
+    }
+
+    .card {
+        border-radius: 10px;
+        padding: 35px 26px;
+        width: 400px
+    }
+
+    .abt {
+        font-size: 14px
+    }
+
+    .inputbox {
+        margin-top: 12px;
+        position: relative
+    }
+
+    .inputbox input {
+        border: 2px solid #eee;
+        padding: 0 10px
+    }
+    </style>
+
+    <!-- jQuery (Javascript tool) -->
+    <script>
+      
+    </script>
+
+  </head>
+  <body>
+      
+      <!-- Form -->
+      <div class="card">
+        <div class="text-center">
+            <h3>Sign In</h3> <span class="abt">Don't have an account yet? <a href="signupform1.html">Sign Up</a></span>
+        </div>
+        <div class="form mt-3">
+            <div class="inputbox"> <input type="text" class="form-control" placeholder="Email"> </div>
+            <div class="inputbox"> <input type="text" class="form-control" placeholder="Password"> </div>
+        </div>
+        <div class="mt-3 proceed">
+            <a href="/" class="btn btn-primary">
+                <div class="text-right"> <span>Finish <i class="fas fa-arrow-right"></i></span> </div>
+            </a> 
+        </div>
+        
+      </div>
+
+    
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-ygbV9kiqUc6oa4msXn9868pTtWMgiQaeYH7/t7LECLbyPA2x65Kgf80OJFdroafW" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js" integrity="sha384-q2kxQ16AaE6UbzuKqyBE9/u/KzioAlnx2maXQHiDX9d4/zp8Ok3f+M7DPm+Ib6IU" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/js/bootstrap.min.js" integrity="sha384-pQQkAEnwaBkjpqZ8RU1fF1AKtTcHJwFl3pblpTlHXybJjHpMYo79HY3hIi4NKxyj" crossorigin="anonymous"></script>
+    -->
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-app.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+      <script src="https://www.gstatic.com/firebasejs/8.2.5/firebase-analytics.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-auth.js"></script>
+      <script src="https://www.gstatic.com/firebasejs/8.2.6/firebase-firestore.js"></script>
+    <!-- firebase below this -->
+    <script >
+      // Your web app's Firebase configuration
+      // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+      var firebaseConfig = {
+        apiKey: "AIzaSyBp0uEzwAXAIxfoy9VaImVlPTHmuLADy0s",
+        authDomain: "tayhc-8d112.firebaseapp.com",
+        projectId: "tayhc-8d112",
+        storageBucket: "tayhc-8d112.appspot.com",
+        messagingSenderId: "544152956788",
+        appId: "1:544152956788:web:a885b7c92ff87bcf760621",
+        measurementId: "G-YB8LP6R3TT"
+      };
+      // Initialize Firebase
+      firebase.initializeApp(firebaseConfig);
+      firebase.analytics();
+    </script>
+    <script src = "app.js" defer></script>
+    <script type = "module" src = "server.js"></script>
+  
+  </body>
+</html>
