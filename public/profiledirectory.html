@@ -216,8 +216,38 @@
 
   </head>
   <body>
-    <div class="container">
+    <!-- Navbar -->
+    <div id="top-navbar">
+      <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #557A95;">
+        <a class="navbar-brand" href="#">
+          <img class="img-responsive img-fluid d-inline-block align-top" width="100" height="100" src="https://paperbackdesign.com/wp-content/uploads/2015/04/generic-logo_150ppi-600x300px.png" alt="A generic logo to be replaced.">
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="index.html">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/public/profiledirectory.html">Profiles</a>
+            </li>
+            <li class="nav-item dropdown">
+              <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Resources
+              </a>
+              <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item" href="#">Category 1</a></li>
+                <li><a class="dropdown-item" href="#">Category 2</a></li>
+                <li><a class="dropdown-item" href="#">Category 3</a></li>
+              </ul>
+            </li>
+          </ul>
 
+<<<<<<< HEAD
       <!-- Navbar -->
       <div class="container-fluid">
         <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #98d7c2;">
@@ -262,9 +292,27 @@
                 <button id="signOutBtn" class="btn btn-danger btn-block"> Sign Out</button>
               </section>
             </div>
+=======
+          <div class="d-flex ms-sm-auto p-2">
+            <!-- Login/Sign Up buttons -->
+            <section id="whenSignedOut">
+              <button class="btn btn-primary btn-block"><i class="fa fa-sign-in-alt"></i> Sign in</button>
+              <button id="signInBtn" class="btn btn-danger btn-block"><i class="fa fa-sign-in-alt"></i> Sign in with Google</button>
+              <button class="btn btn-secondary btn-block"><i class="fa fa-user-plus"></i> Sign Up</button>
+            </section>
+            <!-- sign out button -->
+            <section id="whenSignedIn" hidden="true">
+              <div id="userDetails"></div>
+              <button id="signOutBtn" class="btn btn-danger btn-block"> Sign Out</button>
+            </section>
+>>>>>>> main
           </div>
-        </nav>
-      </div>
+        </div>
+      </nav>
+    </div>
+    <div class="container">
+
+      
       
       <!-- Header -->
       <div class="home-background header-image" style='min-height: 40vh; color: #fff;'>
