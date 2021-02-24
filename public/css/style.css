@@ -68,6 +68,10 @@ p {
 
 /* Profile Page */
 
+.profile-page #top-navbar{
+      color:white;
+}
+
 .profile-page .page-header {
       height: 300px;
       background-position:center;
