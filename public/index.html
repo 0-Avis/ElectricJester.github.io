@@ -7,50 +7,17 @@
 
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
+    
+    <link  rel="stylesheet" href="css/style.css">
 
     <!-- Font Awesome (Icons) -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 
-    <title>TAY Housing Collaborative Main Page</title>
+    <title>Placer County Roommate Finder</title>
 
     <!-- Import Fonts -->
     <link rel="preconnect" href="https://fonts.gstatic.com">
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400&family=Roboto:wght@300&display=swap" rel="stylesheet"> 
-
-    <!-- Style Definitions -->
-    <style>
-      h1 {
-        font-family: 'Roboto Slab', serif;
-        font-size: 250%;
-        color: white;
-      }
-      h2 {
-        font-family: 'Roboto Slab', serif;
-        font-size: 175%;
-        font-weight: bold;
-      }
-      h5 {
-        font-family: 'Roboto Slab', serif;
-        font-size: 140%;
-      }
-      p {
-        font-family: 'Roboto Slab', serif;
-        font-size: 130%;
-      }
-      .container {
-        position: relative;
-      }
-      .centered {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-      }
-      .home-background {
-        background: linear-gradient(180deg, rgba(0,0,0,0) 0%, rgba(0,0,0,0.90) 100%), 
-                    url(https://media.istockphoto.com/photos/suburban-white-generic-house-picture-id480840087);
-      }
-    </style>
 
     <!-- jQuery (Javascript tool) -->
     <script>
@@ -59,15 +26,30 @@
 
   </head>
   <body>
-
-    <div class="container-fluid">
-      
       <!-- Navbar -->
-      <div class="container-fluid">
-        <nav class="navbar navbar-expand-lg navbar-light" style="background-color: #98d7c2;">
-          <a class="navbar-brand" href="#">
-            <img class="img-responsive img-fluid d-inline-block align-top" width="100" height="100" src="https://paperbackdesign.com/wp-content/uploads/2015/04/generic-logo_150ppi-600x300px.png" alt="A generic logo to be replaced.">
+    <div id="top-navbar">
+  <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #557A95;">
+    <a class="navbar-brand" href="#">
+      <img class="img-responsive img-fluid d-inline-block align-top" width="100" height="100" src="https://www.clipartkey.com/mpngs/m/262-2622800_placer-county-california-logo.png" alt="A generic logo to be replaced.">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link active" href="/"> Home <span class="sr-only">(current)</span></a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link active" href="profiledirectory.html">Profiles</a>
+        </li>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle active" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            Resources
           </a>
+<<<<<<< HEAD
           <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
           </button>
@@ -108,33 +90,59 @@
             </div>
           </div>
         </nav>
+=======
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+            <li><a class="dropdown-item" href="#">Category 1</a></li>
+            <li><a class="dropdown-item" href="#">Category 2</a></li>
+            <li><a class="dropdown-item" href="#">Category 3</a></li>
+          </ul>
+        </li>
+      </ul>
+      
+      <div class="d-flex ms-sm-auto p-2">
+        <!-- Login/Sign Up buttons -->
+        <section id="whenSignedOut">
+          <button class="btn btn-primary btn-block"><i class="fa fa-sign-in-alt"></i> Sign in</button>
+          <button id="signInBtn" class="btn btn-danger btn-block"><i class="fa fa-sign-in-alt"></i> Sign in with Google</button>
+          <button class="btn btn-secondary btn-block"><i class="fa fa-user-plus"></i> Sign Up</button>
+        </section>
+        <!-- sign out button -->
+        <section id="whenSignedIn" hidden="true">
+          <div id="userDetails"></div>
+          <button id="signOutBtn" class="btn btn-danger btn-block"> Sign Out</button>
+        </section>
+>>>>>>> main
       </div>
+    </div>
+  </nav>
+    </div>
+    <div class="container-fluid">
+      
+      
       
       <!-- Picture of House/Welcome -->
-      <div class="home-background container" style='min-height: 70vh; color: #fff;'>
+      <div class="home-background container" style='min-height: 550px; color: #fff;'>
         <div class="centered">
-          <h1 class="text-center">Welcome to TAY Housing Collaborative</h1>
+          <h1 class="text-center">Placer County Roommate Finder</h1>
         </div>
       </div>
       
-      
-
-
 
       <!-- Mission statement -->
-      <div class="card">
+      <div class="card m-2">
         <div class="card-header">
           <h2>Mission Statement</h2>
         </div>
         <div class="card-body">
           <blockquote class="blockquote mb-0">
-            <p>TAY Housing Collaborative aims to...</p>
+            <p>The process of finding and securing affordable housing can be extremely confusing and difficult,
+               especially for today's developing youth. The purpose of this site is to provide adequete resources for at-risk teens, as well as aiding in the search for finding roommates.</p>
           </blockquote>
         </div>
       </div>
 
       <!-- TAY Employees -->
-      <h2>The faces of TAY Housing Collaborative:</h2>
+      <h2 class="p-2">The faces of TAY Housing Collaborative:</h2>
       <div class="card-group">
         <div class="card">
           <img class="card-img-top" src="https://webstockreview.net/images/clipart-woman-cellphone-19.png" alt="Person 1">
@@ -160,7 +168,7 @@
             <p class="card-text"><small class="text-muted">Role</small></p>
           </div>
         </div>
-      </div>
+
     </div>
     
     <!-- Optional JavaScript; choose one of the two! -->
@@ -198,12 +206,8 @@
       firebase.initializeApp(firebaseConfig);
       firebase.analytics();
     </script>
-<<<<<<< HEAD
-    <script src = "auth.js" defer></script>
-=======
     <script src = "app.js" defer></script>
     <script type = "module" src = "server.js"></script>
->>>>>>> a2cf79bdedc488f8f8af673829226f158311b741
   
   </body>
 </html>
